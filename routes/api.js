@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Workout = require('../models/workout');
+const Workout = require('../models/Workout.js');
 
 router.get('/workouts', (req, res) => {
     Workout.find({}).sort({ date: -1 })

@@ -18,7 +18,7 @@ router.post('/workouts', ({body}, res) => {
       });
 })
 
-router.put('workouts/:id', (req, res) => {
+router.put('/workouts/:id', (req, res) => {
     Workout.findOneAndUpdate(
         { _id: req.params.id },
     { $push: { exercises: req.body } },
